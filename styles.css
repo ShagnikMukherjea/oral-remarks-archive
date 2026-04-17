@@ -431,6 +431,15 @@ blockquote {
     border: 1px solid var(--line-strong);
     border-radius: 999px;
     background: var(--surface);
+    color: var(--muted);
+  }
+
+  .date-sidebar-inner a:hover,
+  .date-sidebar-inner a:active,
+  .date-sidebar-inner a:visited,
+  .date-sidebar-inner a:focus,
+  .date-sidebar-inner a:focus-visible {
+    color: var(--muted);
   }
 
   .section-banner {
