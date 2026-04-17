@@ -321,7 +321,7 @@ blockquote {
 @media (max-width: 640px) {
   .site-shell {
     width: min(calc(100% - 20px), var(--max-width));
-    margin: 10px auto 36px;
+    margin: 21px auto 36px;
   }
 
   .hero,
