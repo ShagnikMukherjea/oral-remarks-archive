@@ -126,6 +126,10 @@ h3 {
   font-weight: 500;
 }
 
+.menu-buttons .label-short {
+  display: none;
+}
+
 .menu-buttons a[aria-current="page"] {
   border-color: var(--accent);
   color: var(--accent);
@@ -341,7 +345,7 @@ blockquote {
 
   .hero,
   .page-header {
-    text-align: center;
+    text-align: left;
   }
 
   h1 {
@@ -357,16 +361,35 @@ blockquote {
   }
 
   .menu-buttons {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    display: flex;
+    flex-wrap: nowrap;
     gap: 10px;
+    margin-top: 16px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .menu-buttons::-webkit-scrollbar {
+    display: none;
   }
 
   .menu-buttons a {
     justify-content: center;
-    width: 100%;
+    flex: 0 0 auto;
     min-height: 42px;
-    padding: 0 10px;
+    padding: 0 12px;
+    white-space: nowrap;
+    font-size: 0.88rem;
+  }
+
+  .menu-buttons .label-full {
+    display: none;
+  }
+
+  .menu-buttons .label-short {
+    display: inline;
   }
 
   .date-sidebar {
@@ -376,10 +399,14 @@ blockquote {
   .date-sidebar-inner {
     display: flex;
     gap: 10px;
-    padding: 14px;
+    padding: 0;
     overflow-x: auto;
     overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
   }
 
   .date-sidebar-inner::-webkit-scrollbar {
