@@ -334,8 +334,76 @@ blockquote {
     padding: 24px 18px;
   }
 
+  .hero-copy,
+  .page-copy {
+    max-width: none;
+  }
+
+  .hero,
+  .page-header {
+    text-align: center;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 10vw, 2.7rem);
+    line-height: 1.02;
+  }
+
+  .lede {
+    font-size: 0.98rem;
+    line-height: 1.55;
+    max-width: 32ch;
+    margin: 0 auto;
+  }
+
+  .menu-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .menu-buttons a {
+    justify-content: center;
+    width: 100%;
+    min-height: 42px;
+    padding: 0 10px;
+  }
+
+  .date-sidebar {
+    overflow: hidden;
+  }
+
   .date-sidebar-inner {
-    grid-template-columns: 1fr;
+    display: flex;
+    gap: 10px;
+    padding: 14px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+  }
+
+  .date-sidebar-inner::-webkit-scrollbar {
+    display: none;
+  }
+
+  .date-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .date-sidebar-label {
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  .date-sidebar-inner a {
+    white-space: nowrap;
+    padding: 9px 12px;
+    border: 1px solid var(--line-strong);
+    border-radius: 999px;
+    background: var(--surface);
   }
 
   blockquote {
