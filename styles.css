@@ -24,7 +24,7 @@ html {
 
 body {
   margin: 0;
-  min-height: 100vh;
+  padding-bottom: 56px;
   color: var(--ink);
   background: var(--bg);
   font-family: "Instrument Sans", sans-serif;
@@ -42,7 +42,7 @@ img {
 
 .site-shell {
   width: min(calc(100% - 32px), var(--max-width));
-  margin: 32px auto 56px;
+  margin: 32px auto 0;
 }
 
 .hero,
@@ -321,7 +321,11 @@ blockquote {
 @media (max-width: 640px) {
   .site-shell {
     width: min(calc(100% - 20px), var(--max-width));
-    margin: 21px auto 36px;
+    margin: 21px auto 0;
+  }
+
+  body {
+    padding-bottom: 36px;
   }
 
   .hero,
