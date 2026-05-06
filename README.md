@@ -1,2 +1,2 @@
 # The Oral Remarks Archive
-An archive of notable and thought-provoking oral remarks from the Indian judiciary.
+An archive of thought-provoking oral remarks from the Indian judiciary.
