@@ -192,8 +192,9 @@ main {
 .remark-card {
   display: grid;
   grid-template-columns: 132px minmax(0, 1fr);
-  gap: 28px;
-  padding: 31px 0 35px;
+  row-gap: 10px;
+  column-gap: 28px;
+  padding: 18px 0;
   border-bottom: 1px solid var(--line-soft);
 }
 
@@ -217,14 +218,19 @@ blockquote {
   line-height: 1.2;
 }
 
+blockquote + .remark-source,
+.remark-source + .remark-context {
+  margin-top: 4px;
+}
+
 .remark-source {
-  margin: 18px 0 0;
+  margin: 0;
   font-weight: 600;
 }
 
 .remark-context {
   max-width: 70ch;
-  margin: 8px 0 0;
+  margin: 0;
   color: var(--muted);
   font-size: 0.98rem;
   font-style: italic;
@@ -253,7 +259,8 @@ blockquote {
 }
 
 .credit-panel {
-  max-width: 720px;
+  width: 100%;
+  max-width: none;
   margin-top: 40px;
   padding-top: 22px;
   border-top: 1px solid var(--line-soft);
@@ -271,7 +278,7 @@ blockquote {
   }
 
   .site-shell {
-    width: min(calc(100% - 28px), var(--max-width));
+    width: min(calc(100% - 40px), var(--max-width));
     padding-top: 28px;
   }
 
@@ -284,8 +291,15 @@ blockquote {
   }
 
   .hero,
-  .page-header,
-  .content-layout,
+  .page-header {
+    gap: 14px;
+    padding-bottom: 18px;
+  }
+
+  .content-layout {
+    gap: 0;
+  }
+
   .about-layout,
   .remark-card {
     gap: 22px;
@@ -297,6 +311,7 @@ blockquote {
   }
 
   .masthead-tools {
+    gap: 14px;
     justify-items: start;
   }
 
@@ -324,7 +339,8 @@ blockquote {
   }
 
   .date-sidebar-inner {
-    padding-top: 28px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
     overflow-x: auto;
     overscroll-behavior-x: contain;
     -webkit-overflow-scrolling: touch;
@@ -343,12 +359,13 @@ blockquote {
   }
 
   .section-banner {
-    padding: 24px 0;
+    padding: 18px 0;
+    margin-bottom: 0;
   }
 
   .remark-card {
-    gap: 12px;
-    padding: 27px 0 31px;
+    gap: 8px 12px;
+    padding: 16px 0;
   }
 
   .remark-date {
