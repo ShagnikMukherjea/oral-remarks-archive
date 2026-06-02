@@ -137,12 +137,22 @@ main {
   margin-top: 0;
 }
 
-.content-layout,
-.about-layout {
+.content-layout {
   display: grid;
   grid-template-columns: 180px minmax(0, 1fr);
   gap: 48px;
   align-items: start;
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.about-layout > [aria-hidden="true"] {
+  display: none;
 }
 
 .date-sidebar {
@@ -181,7 +191,7 @@ main {
 
 .section-banner {
   margin-bottom: 8px;
-  padding: 24px 0;
+  padding: 18px 0;
   border-bottom: 1px solid var(--line);
 }
 
@@ -218,9 +228,12 @@ blockquote {
   line-height: 1.2;
 }
 
-blockquote + .remark-source,
-.remark-source + .remark-context {
+blockquote + .remark-source {
   margin-top: 4px;
+}
+
+.remark-source + .remark-context {
+  margin-top: 1px;
 }
 
 .remark-source {
@@ -244,25 +257,26 @@ blockquote + .remark-source,
 }
 
 .prose-panel {
-  max-width: 720px;
+  width: 100%;
+  max-width: none;
 }
 
 .prose-panel p {
-  margin: 24px 0 0;
+  margin: 18px 0 0;
   color: var(--muted);
-  font-size: clamp(1.05rem, 1.7vw, 1.2rem);
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
   line-height: 1.72;
 }
 
 .prose-panel p:first-child {
-  margin-top: 28px;
+  margin-top: 18px;
 }
 
 .credit-panel {
   width: 100%;
   max-width: none;
-  margin-top: 40px;
-  padding-top: 22px;
+  margin-top: 18px;
+  padding-top: 18px;
   border-top: 1px solid var(--line-soft);
   color: var(--quiet);
   font-size: 0.94rem;
@@ -273,6 +287,9 @@ blockquote + .remark-source,
 }
 
 @media (max-width: 760px) {
+  .credit-panel {
+    padding-top: 18px;
+  }
   body {
     padding-bottom: 42px;
   }
