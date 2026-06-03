@@ -229,16 +229,17 @@ blockquote {
 }
 
 blockquote + .remark-source {
-  margin-top: 4px;
+  margin-top: 2px;
 }
 
 .remark-source + .remark-context {
-  margin-top: 1px;
+  margin-top: 0;
 }
 
 .remark-source {
   margin: 0;
   font-weight: 600;
+  line-height: 1.65;
 }
 
 .remark-context {
@@ -247,6 +248,7 @@ blockquote + .remark-source {
   color: var(--muted);
   font-size: 0.98rem;
   font-style: italic;
+  line-height: 1.65;
 }
 
 .remark-context a,
